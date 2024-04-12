@@ -38,7 +38,7 @@ class Mode
 
 public:
 
-    // Auto Pilot Modes enumeration
+    // Auto Pilot Modes enumeration                         
     enum class Number : uint8_t {
         STABILIZE =     0,  // manual angle with manual depth/throttle
         ACRO =          1,  // manual body-frame angular rate with manual depth/throttle
@@ -50,7 +50,7 @@ public:
         POSHOLD =      16,  // automatic position hold with manual override, with automatic throttle
         MANUAL =       19,  // Pass-through input with no stabilization
         MOTOR_DETECT = 20,  // Automatically detect motors orientation
-        SURFTRAK =     21   // Track distance above seafloor (hold range)
+        SURFTRAK =     21,   // Track distance above seafloor (hold range)
     };
 
     // constructor
@@ -202,6 +202,26 @@ protected:
 
     const char *name() const override { return "MANUAL"; }
     const char *name4() const override { return "MANU"; }
+};
+
+
+class ModeCustom_stab : public Mode
+{
+
+public:
+    // inherit constructor
+    using Mode::Mode;
+    virtual void run() override;
+    bool init(bool ignore_checks) override;
+    bool requires_GPS() const override { return false; }
+    bool has_manual_throttle() const override { return true; }
+    bool allows_arming(bool from_gcs) const override { return true; }
+    bool is_autopilot() const override { return false; }
+
+protected:
+
+    const char *name() const override { return "CUSTOM"; }
+    const char *name4() const override { return "CUST"; }
 };
 
 

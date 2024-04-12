@@ -190,6 +190,7 @@ void Sub::handle_jsbutton_press(uint8_t _button, bool shift, bool held)
     case JSButton::button_function_t::k_mode_poshold:
         set_mode(Mode::Number::POSHOLD, ModeReason::RC_COMMAND);
         break;
+
 #if RANGEFINDER_ENABLED == ENABLED
     case JSButton::button_function_t::k_mode_surftrak:
         set_mode(Mode::Number::SURFTRAK, ModeReason::RC_COMMAND);
@@ -761,11 +762,11 @@ JSButton* Sub::get_button(uint8_t index)
 
 void Sub::default_js_buttons()
 {
-    JSButton::button_function_t defaults[16][2] = {
+    JSButton::button_function_t defaults[16][2]  {
         {JSButton::button_function_t::k_none,                   JSButton::button_function_t::k_none},
         {JSButton::button_function_t::k_mode_manual,            JSButton::button_function_t::k_none},
         {JSButton::button_function_t::k_mode_depth_hold,        JSButton::button_function_t::k_none},
-        {JSButton::button_function_t::k_mode_stabilize,         JSButton::button_function_t::k_none},
+	{JSButton::button_function_t::k_mode_stabilize,         JSButton::button_function_t::k_none},
 
         {JSButton::button_function_t::k_disarm,                 JSButton::button_function_t::k_none},
         {JSButton::button_function_t::k_shift,                  JSButton::button_function_t::k_none},

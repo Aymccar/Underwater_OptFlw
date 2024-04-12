@@ -1,0 +1,1523 @@
+commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above terrain must be positive");
+commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Bad alt frame");
+commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:             // 114
+commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:             // 115
+commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:             // 178
+commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:             // 179
+commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:                // 201
+commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:          // 205
+commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:                      // 222  accept guided mode limits
+commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+commands_logic.cpp:// do_roi - starts actions required by MAV_CMD_NAV_ROI
+mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s requires position", new_flightmode->name());
+mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s need alt estimate", new_flightmode->name());
+mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Flight mode change failed %s", new_flightmode->name());
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL |
+GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+GCS_Sub.cpp:    control_sensors_health &= ~MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE; // check the internal barometer only
+GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+GCS_Sub.cpp:        //control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+GCS_Sub.cpp:        //control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+GCS_Sub.cpp:        control_sensors_health  |= MAV_SYS_STATUS_TERRAIN;
+GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+GCS_Sub.cpp:            control_sensors_health |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is ok!", current_motor + 1);
+mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is reversed! Saving it!", current_motor + 1);
+mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Bad thrust read, trying to push the other way...");
+mode_motordetect.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "Failed! Please check Thruster %d and frame setup!", current_motor + 1);
+mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Motor direction detection is complete.");
+toread:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Terrain data (rangefinder) not available");
+toread:mode_auto.cpp:        // TO-DO: expand handling of the do_nav_roi to support all modes of the MAVLink.  Currently we only handle mode 4 (see below)
+toread:mode_auto.cpp:    gcs().send_text(MAV_SEVERITY_WARNING, "Attempting auto failsafe recovery");
+toread:mode_auto.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "Terrain failsafe recovery successful!");
+toread:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Terrain failsafe recovery failure: No Rangefinder!");
+toread:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Terrain failsafe recovery timeout!");
+toread:commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above home must be negative");
+toread:commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above terrain must be positive");
+toread:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Bad alt frame");
+toread:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT:                  // 16  Navigate to Waypoint
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LAND:              // 21 LAND to Waypoint
+toread:commands_logic.cpp:    case MAV_CMD_NAV_RETURN_TO_LAUNCH:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:              // 17 Loiter indefinitely
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TURNS:              //18 Loiter N Times
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TIME:              // 19
+toread:commands_logic.cpp:    case MAV_CMD_NAV_GUIDED_ENABLE:             // 92  accept navigation commands from external nav computer
+toread:commands_logic.cpp:    case MAV_CMD_NAV_DELAY:                    // 93 Delay the next navigation command
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_DELAY:             // 112
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:             // 114
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:             // 115
+toread:commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:             // 178
+toread:commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:             // 179
+toread:commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:                // 201
+toread:commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:          // 205
+toread:commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:                      // 222  accept guided mode limits
+toread:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Ignoring command %d", cmd.id);
+toread:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LAND:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_RETURN_TO_LAUNCH:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TURNS:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TIME:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_GUIDED_ENABLE:
+toread:commands_logic.cpp:    case MAV_CMD_NAV_DELAY:
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_DELAY:
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+toread:commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+toread:commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:
+toread:commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:
+toread:commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:
+toread:commands_logic.cpp:    case MAV_CMD_DO_SET_CAM_TRIGG_DIST:
+toread:commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:
+toread:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Skipping invalid cmd #%i",cmd.id);
+toread:commands_logic.cpp:    // In mavproxy misseditor: Abs = 0 = ALT_FRAME_ABSOLUTE
+toread:commands_logic.cpp:    //    2 = ALT_FRAME_ABOVE_ORIGIN, not an option in mavproxy misseditor
+toread:commands_logic.cpp:    gcs().send_text(MAV_SEVERITY_INFO, "Delaying %u sec", (unsigned)(nav_delay_time_max_ms/1000));
+toread:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Reached command #%i",cmd.index);
+toread:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT: {
+toread:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+toread:commands_logic.cpp:// do_roi - starts actions required by MAV_CMD_NAV_ROI
+toread:commands_logic.cpp://  TO-DO: add support for other features of MAV_CMD_DO_SET_ROI including pointing at a given waypoint
+toread:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s requires position", new_flightmode->name());
+toread:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s need alt estimate", new_flightmode->name());
+toread:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Flight mode change failed %s", new_flightmode->name());
+toread:GCS_Mavlink.h:#include <GCS_MAVLink/GCS.h>
+toread:GCS_Mavlink.h:class GCS_MAVLINK_Sub : public GCS_MAVLINK {
+toread:GCS_Mavlink.h:    using GCS_MAVLINK::GCS_MAVLINK;
+toread:GCS_Mavlink.h:    MAV_RESULT handle_flight_termination(const mavlink_command_int_t &packet) override;
+toread:GCS_Mavlink.h:    MAV_RESULT handle_command_do_set_roi(const Location &roi_loc) override;
+toread:GCS_Mavlink.h:    MAV_RESULT _handle_command_preflight_calibration_baro(const mavlink_message_t &msg) override;
+toread:GCS_Mavlink.h:    MAV_RESULT _handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg) override;
+toread:GCS_Mavlink.h:    MAV_RESULT handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg) override;
+toread:GCS_Mavlink.h:    void handle_message(const mavlink_message_t &msg) override;
+toread:GCS_Mavlink.h:    MAV_MODE base_mode() const override;
+toread:GCS_Mavlink.h:    MAV_STATE vehicle_system_status() const override;
+toread:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet);
+toread:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet);
+toread:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet);
+toread:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet);
+toread:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet);
+toread:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet);
+toread:system.cpp:    // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+toread:system.cpp:    camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+toread:GCS_Sub.cpp:uint8_t GCS_Sub::sysid_this_mav() const
+toread:GCS_Sub.cpp:    return sub.g.sysid_this_mav;
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL |
+toread:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+toread:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+toread:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+toread:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+toread:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+toread:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+toread:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+toread:GCS_Sub.cpp:    control_sensors_health &= ~MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE; // check the internal barometer only
+toread:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+toread:GCS_Sub.cpp:        //control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+toread:GCS_Sub.cpp:        //control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+toread:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+toread:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+toread:GCS_Sub.cpp:        control_sensors_health  |= MAV_SYS_STATUS_TERRAIN;
+toread:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+toread:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+toread:GCS_Sub.cpp:            control_sensors_health |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+toread:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is ok!", current_motor + 1);
+toread:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is reversed! Saving it!", current_motor + 1);
+toread:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Bad thrust read, trying to push the other way...");
+toread:mode_motordetect.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "Failed! Please check Thruster %d and frame setup!", current_motor + 1);
+toread:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Motor direction detection is complete.");
+toread:defines.h:// for mavlink SET_POSITION_TARGET messages
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE        (1<<2)
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE      ((1<<0) | (1<<1) | (1<<2))
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE      ((1<<3) | (1<<4) | (1<<5))
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE      ((1<<6) | (1<<7) | (1<<8))
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_FORCE           (1<<9)
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE      (1<<10)
+toread:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE (1<<11)
+toread:config.h:#ifndef MAV_SYSTEM_ID
+toread:config.h:# define MAV_SYSTEM_ID          1
+toread:joystick.cpp:            arming.disarm(AP_Arming::Method::MAVLINK);
+toread:joystick.cpp:            arming.arm(AP_Arming::Method::MAVLINK);
+toread:joystick.cpp:        arming.arm(AP_Arming::Method::MAVLINK);
+toread:joystick.cpp:        arming.disarm(AP_Arming::Method::MAVLINK);
+toread:joystick.cpp:        // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+toread:joystick.cpp:        camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+toread:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 2");
+toread:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 1");
+toread:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain: %2.0f%%",(double)gain*100);
+toread:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+toread:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+toread:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Set");
+toread:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Disabled");
+toread:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Attitude Control");
+toread:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Movement Control");
+toread:GCS_Sub.h:#include <GCS_MAVLink/GCS.h>
+toread:GCS_Sub.h:#include "GCS_Mavlink.h"
+toread:GCS_Sub.h:    // GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override;
+toread:GCS_Sub.h:    // const GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override const;
+toread:GCS_Sub.h:    GCS_MAVLINK_CHAN_METHOD_DEFINITIONS(GCS_MAVLINK_Sub);
+toread:GCS_Sub.h:    MAV_TYPE frame_type() const override;
+toread:GCS_Sub.h:    uint8_t sysid_this_mav() const override;
+toread:GCS_Sub.h:    // mavlink messages.  We want to prioritise the main flight
+toread:GCS_Sub.h:    GCS_MAVLINK_Sub *new_gcs_mavlink_backend(GCS_MAVLINK_Parameters &params,
+toread:GCS_Sub.h:        return new GCS_MAVLINK_Sub(params, uart);
+toread:GCS_Mavlink.cpp:#include "GCS_Mavlink.h"
+toread:GCS_Mavlink.cpp:MAV_TYPE GCS_Sub::frame_type() const
+toread:GCS_Mavlink.cpp:    return MAV_TYPE_SUBMARINE;
+toread:GCS_Mavlink.cpp:MAV_MODE GCS_MAVLINK_Sub::base_mode() const
+toread:GCS_Mavlink.cpp:    uint8_t _base_mode = MAV_MODE_FLAG_STABILIZE_ENABLED;
+toread:GCS_Mavlink.cpp:    // MAVLink enabled ground station can work out something about
+toread:GCS_Mavlink.cpp:    // what the MAV is up to. The actual bit values are highly
+toread:GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_GUIDED_ENABLED;
+toread:GCS_Mavlink.cpp:        // note that MAV_MODE_FLAG_AUTO_ENABLED does not match what
+toread:GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_MANUAL_INPUT_ENABLED;
+toread:GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_SAFETY_ARMED;
+toread:GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_CUSTOM_MODE_ENABLED;
+toread:GCS_Mavlink.cpp:    return (MAV_MODE)_base_mode;
+toread:GCS_Mavlink.cpp:MAV_STATE GCS_MAVLINK_Sub::vehicle_system_status() const
+toread:GCS_Mavlink.cpp:        return MAV_STATE_CRITICAL;
+toread:GCS_Mavlink.cpp:        return MAV_STATE_ACTIVE;
+toread:GCS_Mavlink.cpp:    return MAV_STATE_STANDBY;
+toread:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_banner()
+toread:GCS_Mavlink.cpp:    GCS_MAVLINK::send_banner();
+toread:GCS_Mavlink.cpp:    send_text(MAV_SEVERITY_INFO, "Frame: %s", sub.motors.get_frame_string());
+toread:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_nav_controller_output() const
+toread:GCS_Mavlink.cpp:    mavlink_msg_nav_controller_output_send(
+toread:GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::vfr_hud_throttle() const
+toread:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_scaled_pressure3()
+toread:GCS_Mavlink.cpp:    mavlink_msg_scaled_pressure3_send(
+toread:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::send_info()
+toread:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_pid_tuning()
+toread:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ROLL,
+toread:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_PITCH,
+toread:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_YAW,
+toread:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ACCZ,
+toread:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::sysid_my_gcs() const
+toread:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::try_send_message(enum ap_message id)
+toread:GCS_Mavlink.cpp:        return GCS_MAVLINK::try_send_message(id);
+toread:GCS_Mavlink.cpp:const AP_Param::GroupInfo GCS_MAVLINK_Parameters::var_info[] = {
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("RAW_SENS", 0, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RAW_SENSORS],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("EXT_STAT", 1, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTENDED_STATUS],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("RC_CHAN",  2, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RC_CHANNELS],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("POSITION", 4, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_POSITION],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA1",   5, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA1],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA2",   6, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA2],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA3",   7, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA3],  0),
+toread:GCS_Mavlink.cpp:    AP_GROUPINFO("PARAMS",   8, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_PARAMS],  0),
+toread:GCS_Mavlink.cpp:    MSG_RC_CHANNELS_RAW, // only sent on a mavlink1 connection
+toread:GCS_Mavlink.cpp:const struct GCS_MAVLINK::stream_entries GCS_MAVLINK::all_stream_entries[] = {
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RAW_SENSORS),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTENDED_STATUS),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_POSITION),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RC_CHANNELS),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA1),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA2),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA3),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_PARAMS),
+toread:GCS_Mavlink.cpp:    MAV_STREAM_TERMINATOR // must have this at end of stream_entries
+toread:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::handle_guided_request(AP_Mission::Mission_Command &cmd)
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration_baro(const mavlink_message_t &msg)
+toread:GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Disarm before calibration.");
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+toread:GCS_Mavlink.cpp:        //result = sub.mavlink_compassmot(chan);
+toread:GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "#CompassMot calibration not supported");
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_UNSUPPORTED;
+toread:GCS_Mavlink.cpp:    return GCS_MAVLINK::_handle_command_preflight_calibration(packet, msg);
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_do_set_roi(const Location &roi_loc)
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home_to_current_location(bool _lock) {
+toread:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home(const Location& loc, bool _lock) {
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+toread:GCS_Mavlink.cpp:    case MAV_CMD_CONDITION_YAW:
+toread:GCS_Mavlink.cpp:        return handle_MAV_CMD_CONDITION_YAW(packet);
+toread:GCS_Mavlink.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+toread:GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_CHANGE_SPEED(packet);
+toread:GCS_Mavlink.cpp:    case MAV_CMD_DO_MOTOR_TEST:
+toread:GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_MOTOR_TEST(packet);
+toread:GCS_Mavlink.cpp:    case MAV_CMD_MISSION_START:
+toread:GCS_Mavlink.cpp:        return handle_MAV_CMD_MISSION_START(packet);
+toread:GCS_Mavlink.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+toread:GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LOITER_UNLIM(packet);
+toread:GCS_Mavlink.cpp:    case MAV_CMD_NAV_LAND:
+toread:GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LAND(packet);
+toread:GCS_Mavlink.cpp:    return GCS_MAVLINK::handle_command_int_packet(packet, msg);
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet)
+toread:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet)
+toread:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet)
+toread:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_DENIED;
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet)
+toread:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet)
+toread:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet)
+toread:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::handle_message(const mavlink_message_t &msg)
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_MANUAL_CONTROL: {     // MAV ID: 69
+toread:GCS_Mavlink.cpp:        mavlink_manual_control_t packet;
+toread:GCS_Mavlink.cpp:        mavlink_msg_manual_control_decode(&msg, &packet);
+toread:GCS_Mavlink.cpp:        if (packet.target != sub.g.sysid_this_mav) {
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_RC_CHANNELS_OVERRIDE: {     // MAV ID: 70
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_ATTITUDE_TARGET: { // MAV ID: 82
+toread:GCS_Mavlink.cpp:        mavlink_set_attitude_target_t packet;
+toread:GCS_Mavlink.cpp:        mavlink_msg_set_attitude_target_decode(&msg, &packet);
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_LOCAL_NED: {   // MAV ID: 84
+toread:GCS_Mavlink.cpp:        mavlink_set_position_target_local_ned_t packet;
+toread:GCS_Mavlink.cpp:        mavlink_msg_set_position_target_local_ned_decode(&msg, &packet);
+toread:GCS_Mavlink.cpp:        if (packet.coordinate_frame != MAV_FRAME_LOCAL_NED &&
+toread:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_LOCAL_OFFSET_NED &&
+toread:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_NED &&
+toread:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_OFFSET_NED &&
+toread:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_FRD) {
+toread:GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+toread:GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+toread:GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+toread:GCS_Mavlink.cpp:        bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+toread:GCS_Mavlink.cpp:        bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+toread:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+toread:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+toread:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+toread:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_LOCAL_OFFSET_NED ||
+toread:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+toread:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+toread:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+toread:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED || packet.coordinate_frame == MAV_FRAME_BODY_FRD || packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+toread:GCS_Mavlink.cpp:            yaw_relative = packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED;
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_GLOBAL_INT: {  // MAV ID: 86
+toread:GCS_Mavlink.cpp:        mavlink_set_position_target_global_int_t packet;
+toread:GCS_Mavlink.cpp:        mavlink_msg_set_position_target_global_int_decode(&msg, &packet);
+toread:GCS_Mavlink.cpp:        bool z_ignore        = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE;
+toread:GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+toread:GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+toread:GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+toread:GCS_Mavlink.cpp:         * bool force           = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_FORCE;
+toread:GCS_Mavlink.cpp:         * bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+toread:GCS_Mavlink.cpp:         * bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+toread:GCS_Mavlink.cpp:            if (!mavlink_coordinate_frame_to_location_alt_frame((MAV_FRAME)packet.coordinate_frame, frame)) {
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_DATA:
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_CHECK:
+toread:GCS_Mavlink.cpp:    // connected to a mavlink enabled subsystem
+toread:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SYS_STATUS: {
+toread:GCS_Mavlink.cpp:        uint32_t MAV_SENSOR_WATER = 0x20000000;
+toread:GCS_Mavlink.cpp:        mavlink_sys_status_t packet;
+toread:GCS_Mavlink.cpp:        mavlink_msg_sys_status_decode(&msg, &packet);
+toread:GCS_Mavlink.cpp:        if ((packet.onboard_control_sensors_enabled & MAV_SENSOR_WATER) && !(packet.onboard_control_sensors_health & MAV_SENSOR_WATER)) {
+toread:GCS_Mavlink.cpp:        GCS_MAVLINK::handle_message(msg);
+toread:GCS_Mavlink.cpp:} // end handle mavlink
+toread:GCS_Mavlink.cpp:uint64_t GCS_MAVLINK_Sub::capabilities() const
+toread:GCS_Mavlink.cpp:    return (MAV_PROTOCOL_CAPABILITY_MISSION_FLOAT |
+toread:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_MISSION_INT |
+toread:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_LOCAL_NED |
+toread:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_GLOBAL_INT |
+toread:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_FLIGHT_TERMINATION |
+toread:GCS_Mavlink.cpp:            (sub.terrain.enabled() ? MAV_PROTOCOL_CAPABILITY_TERRAIN : 0) |
+toread:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_ATTITUDE_TARGET |
+toread:GCS_Mavlink.cpp:            GCS_MAVLINK::capabilities()
+toread:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_flight_termination(const mavlink_command_int_t &packet) {
+toread:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:GCS_Mavlink.cpp:    return MAV_RESULT_FAILED;
+toread:GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_alt() const {
+toread:GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_alt();
+toread:GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_relative_alt() const {
+toread:GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_relative_alt();
+toread:GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::high_latency_target_altitude() const
+toread:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_heading() const
+toread:GCS_Mavlink.cpp:uint16_t GCS_MAVLINK_Sub::high_latency_tgt_dist() const
+toread:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_airspeed() const
+toread:Sub.h:#include "GCS_Mavlink.h"
+toread:Sub.h:    friend class GCS_MAVLINK_Sub;
+toread:Sub.h:        mavlink_set_attitude_target_t packet;
+toread:Sub.h:    bool handle_do_motor_test(mavlink_command_int_t command);
+toread:ReleaseNotes.txt: - Set default BRD_RTC_TYPE to 3 (GPS and MAVLink)
+toread:ReleaseNotes.txt: - Support depth setpoints via MAVlink in Depth-Hold mode
+toread:ReleaseNotes.txt: - Support attitude setpoints via MAVlink in Depth-Hold and Stabilize modes
+toread:ReleaseNotes.txt: - Support for setting MAVLink message intervals
+toread:ReleaseNotes.txt:- Suppress repeated printing of "GPS detected as MAV" messages when no mavlink gps is connected
+toread:ReleaseNotes.txt:- Add support for PLAY_TUNE and LED_CONTROL mavlink commands
+toread:ReleaseNotes.txt:- Acknowledge MAV_CMD_PREFLIGHT_REBOOT_SHUTDOWN before shutting down
+toread:ReleaseNotes.txt:- Remove BASE_RESET and BASE_PRESS baro parameters. Barometer reset is now done via mavlink cmd.
+toread:ReleaseNotes.txt:- Implement parameter reset to defaults via mavlink cmd.
+toread:ReleaseNotes.txt:    - Unsupported mavlink messages
+toread:ReleaseNotes.txt:    a) GCS can use MAV_CMD_MISSION_START to start mission in AUTO even without pilot raising throttle 
+toread:ReleaseNotes.txt:    e) GCS can initiate takeoff even in Loiter, AltHold, PosHold and sport by issuing NAV_TAKEOFF mavlink command
+toread:ReleaseNotes.txt:4) Stop flight mode - causes vehicle to stop quickly, and does not respond to user input or waypoint movement via MAVLink.  Requires GPS, will be renamed to Brake mode.
+toread:ReleaseNotes.txt:    b) Camera control messages sent via MAVLink to smart cameras.  Allow control of camera zoom for upcoming IntelEdison/Sony QX1 camera control board
+toread:ReleaseNotes.txt:    a) SToRM32 gimbal support (using MAVLink)
+toread:ReleaseNotes.txt:11) CLI removed from APM1/2 to save flash space, critical functions moved to MAVLink:
+toread:failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Depth sensor error!");
+toread:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "EKF bad");
+toread:failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Lost manual control");
+toread:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal pressure critical!");
+toread:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal temperature critical!");
+toread:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Leak Detected");
+toread:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "MYGCS: %u, heartbeat lost", g.sysid_my_gcs.get());
+toread:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Crash detected");
+toread:failsafe.cpp:            gcs().send_text(MAV_SEVERITY_CRITICAL,"Failsafe terrain triggered");
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "waiting for a rangefinder reading");
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to hold range", sub.g.surftrak_depth * 0.01f);
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "wrong mode, rangefinder target not set");
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to set rangefinder target", sub.g.surftrak_depth * 0.01f);
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target below minimum, ignored");
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target above maximum, ignored");
+toread:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "rangefinder target is %.2f meters", rangefinder_target_cm * 0.01f);
+toread:test:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Terrain data (rangefinder) not available");
+toread:test:mode_auto.cpp:        // TO-DO: expand handling of the do_nav_roi to support all modes of the MAVLink.  Currently we only handle mode 4 (see below)
+toread:test:mode_auto.cpp:    gcs().send_text(MAV_SEVERITY_WARNING, "Attempting auto failsafe recovery");
+toread:test:mode_auto.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "Terrain failsafe recovery successful!");
+toread:test:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Terrain failsafe recovery failure: No Rangefinder!");
+toread:test:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Terrain failsafe recovery timeout!");
+toread:test:commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above home must be negative");
+toread:test:commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above terrain must be positive");
+toread:test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Bad alt frame");
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT:                  // 16  Navigate to Waypoint
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LAND:              // 21 LAND to Waypoint
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_RETURN_TO_LAUNCH:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:              // 17 Loiter indefinitely
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TURNS:              //18 Loiter N Times
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TIME:              // 19
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_GUIDED_ENABLE:             // 92  accept navigation commands from external nav computer
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_DELAY:                    // 93 Delay the next navigation command
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_DELAY:             // 112
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:             // 114
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:             // 115
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:             // 178
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:             // 179
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:                // 201
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:          // 205
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:                      // 222  accept guided mode limits
+toread:test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Ignoring command %d", cmd.id);
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LAND:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_RETURN_TO_LAUNCH:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TURNS:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TIME:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_GUIDED_ENABLE:
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_DELAY:
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_DELAY:
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_SET_CAM_TRIGG_DIST:
+toread:test:commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:
+toread:test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Skipping invalid cmd #%i",cmd.id);
+toread:test:commands_logic.cpp:    // In mavproxy misseditor: Abs = 0 = ALT_FRAME_ABSOLUTE
+toread:test:commands_logic.cpp:    //    2 = ALT_FRAME_ABOVE_ORIGIN, not an option in mavproxy misseditor
+toread:test:commands_logic.cpp:    gcs().send_text(MAV_SEVERITY_INFO, "Delaying %u sec", (unsigned)(nav_delay_time_max_ms/1000));
+toread:test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Reached command #%i",cmd.index);
+toread:test:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT: {
+toread:test:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+toread:test:commands_logic.cpp:// do_roi - starts actions required by MAV_CMD_NAV_ROI
+toread:test:commands_logic.cpp://  TO-DO: add support for other features of MAV_CMD_DO_SET_ROI including pointing at a given waypoint
+toread:test:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s requires position", new_flightmode->name());
+toread:test:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s need alt estimate", new_flightmode->name());
+toread:test:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Flight mode change failed %s", new_flightmode->name());
+toread:test:GCS_Mavlink.h:#include <GCS_MAVLink/GCS.h>
+toread:test:GCS_Mavlink.h:class GCS_MAVLINK_Sub : public GCS_MAVLINK {
+toread:test:GCS_Mavlink.h:    using GCS_MAVLINK::GCS_MAVLINK;
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_flight_termination(const mavlink_command_int_t &packet) override;
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_command_do_set_roi(const Location &roi_loc) override;
+toread:test:GCS_Mavlink.h:    MAV_RESULT _handle_command_preflight_calibration_baro(const mavlink_message_t &msg) override;
+toread:test:GCS_Mavlink.h:    MAV_RESULT _handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg) override;
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg) override;
+toread:test:GCS_Mavlink.h:    void handle_message(const mavlink_message_t &msg) override;
+toread:test:GCS_Mavlink.h:    MAV_MODE base_mode() const override;
+toread:test:GCS_Mavlink.h:    MAV_STATE vehicle_system_status() const override;
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet);
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet);
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet);
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet);
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet);
+toread:test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet);
+toread:test:system.cpp:    // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+toread:test:system.cpp:    camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+toread:test:GCS_Sub.cpp:uint8_t GCS_Sub::sysid_this_mav() const
+toread:test:GCS_Sub.cpp:    return sub.g.sysid_this_mav;
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL |
+toread:test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+toread:test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+toread:test:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+toread:test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+toread:test:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+toread:test:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+toread:test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+toread:test:GCS_Sub.cpp:    control_sensors_health &= ~MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE; // check the internal barometer only
+toread:test:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+toread:test:GCS_Sub.cpp:        //control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+toread:test:GCS_Sub.cpp:        //control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+toread:test:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+toread:test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+toread:test:GCS_Sub.cpp:        control_sensors_health  |= MAV_SYS_STATUS_TERRAIN;
+toread:test:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+toread:test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+toread:test:GCS_Sub.cpp:            control_sensors_health |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+toread:test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is ok!", current_motor + 1);
+toread:test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is reversed! Saving it!", current_motor + 1);
+toread:test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Bad thrust read, trying to push the other way...");
+toread:test:mode_motordetect.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "Failed! Please check Thruster %d and frame setup!", current_motor + 1);
+toread:test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Motor direction detection is complete.");
+toread:test:defines.h:// for mavlink SET_POSITION_TARGET messages
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE        (1<<2)
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE      ((1<<0) | (1<<1) | (1<<2))
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE      ((1<<3) | (1<<4) | (1<<5))
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE      ((1<<6) | (1<<7) | (1<<8))
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_FORCE           (1<<9)
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE      (1<<10)
+toread:test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE (1<<11)
+toread:test:config.h:#ifndef MAV_SYSTEM_ID
+toread:test:config.h:# define MAV_SYSTEM_ID          1
+toread:test:joystick.cpp:            arming.disarm(AP_Arming::Method::MAVLINK);
+toread:test:joystick.cpp:            arming.arm(AP_Arming::Method::MAVLINK);
+toread:test:joystick.cpp:        arming.arm(AP_Arming::Method::MAVLINK);
+toread:test:joystick.cpp:        arming.disarm(AP_Arming::Method::MAVLINK);
+toread:test:joystick.cpp:        // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+toread:test:joystick.cpp:        camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+toread:test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 2");
+toread:test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 1");
+toread:test:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain: %2.0f%%",(double)gain*100);
+toread:test:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+toread:test:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+toread:test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Set");
+toread:test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Disabled");
+toread:test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Attitude Control");
+toread:test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Movement Control");
+toread:test:GCS_Sub.h:#include <GCS_MAVLink/GCS.h>
+toread:test:GCS_Sub.h:#include "GCS_Mavlink.h"
+toread:test:GCS_Sub.h:    // GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override;
+toread:test:GCS_Sub.h:    // const GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override const;
+toread:test:GCS_Sub.h:    GCS_MAVLINK_CHAN_METHOD_DEFINITIONS(GCS_MAVLINK_Sub);
+toread:test:GCS_Sub.h:    MAV_TYPE frame_type() const override;
+toread:test:GCS_Sub.h:    uint8_t sysid_this_mav() const override;
+toread:test:GCS_Sub.h:    // mavlink messages.  We want to prioritise the main flight
+toread:test:GCS_Sub.h:    GCS_MAVLINK_Sub *new_gcs_mavlink_backend(GCS_MAVLINK_Parameters &params,
+toread:test:GCS_Sub.h:        return new GCS_MAVLINK_Sub(params, uart);
+toread:test:GCS_Mavlink.cpp:#include "GCS_Mavlink.h"
+toread:test:GCS_Mavlink.cpp:MAV_TYPE GCS_Sub::frame_type() const
+toread:test:GCS_Mavlink.cpp:    return MAV_TYPE_SUBMARINE;
+toread:test:GCS_Mavlink.cpp:MAV_MODE GCS_MAVLINK_Sub::base_mode() const
+toread:test:GCS_Mavlink.cpp:    uint8_t _base_mode = MAV_MODE_FLAG_STABILIZE_ENABLED;
+toread:test:GCS_Mavlink.cpp:    // MAVLink enabled ground station can work out something about
+toread:test:GCS_Mavlink.cpp:    // what the MAV is up to. The actual bit values are highly
+toread:test:GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_GUIDED_ENABLED;
+toread:test:GCS_Mavlink.cpp:        // note that MAV_MODE_FLAG_AUTO_ENABLED does not match what
+toread:test:GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_MANUAL_INPUT_ENABLED;
+toread:test:GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_SAFETY_ARMED;
+toread:test:GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_CUSTOM_MODE_ENABLED;
+toread:test:GCS_Mavlink.cpp:    return (MAV_MODE)_base_mode;
+toread:test:GCS_Mavlink.cpp:MAV_STATE GCS_MAVLINK_Sub::vehicle_system_status() const
+toread:test:GCS_Mavlink.cpp:        return MAV_STATE_CRITICAL;
+toread:test:GCS_Mavlink.cpp:        return MAV_STATE_ACTIVE;
+toread:test:GCS_Mavlink.cpp:    return MAV_STATE_STANDBY;
+toread:test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_banner()
+toread:test:GCS_Mavlink.cpp:    GCS_MAVLINK::send_banner();
+toread:test:GCS_Mavlink.cpp:    send_text(MAV_SEVERITY_INFO, "Frame: %s", sub.motors.get_frame_string());
+toread:test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_nav_controller_output() const
+toread:test:GCS_Mavlink.cpp:    mavlink_msg_nav_controller_output_send(
+toread:test:GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::vfr_hud_throttle() const
+toread:test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_scaled_pressure3()
+toread:test:GCS_Mavlink.cpp:    mavlink_msg_scaled_pressure3_send(
+toread:test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::send_info()
+toread:test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_pid_tuning()
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ROLL,
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_PITCH,
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_YAW,
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ACCZ,
+toread:test:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::sysid_my_gcs() const
+toread:test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::try_send_message(enum ap_message id)
+toread:test:GCS_Mavlink.cpp:        return GCS_MAVLINK::try_send_message(id);
+toread:test:GCS_Mavlink.cpp:const AP_Param::GroupInfo GCS_MAVLINK_Parameters::var_info[] = {
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("RAW_SENS", 0, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RAW_SENSORS],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXT_STAT", 1, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTENDED_STATUS],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("RC_CHAN",  2, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RC_CHANNELS],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("POSITION", 4, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_POSITION],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA1",   5, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA1],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA2",   6, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA2],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA3",   7, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA3],  0),
+toread:test:GCS_Mavlink.cpp:    AP_GROUPINFO("PARAMS",   8, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_PARAMS],  0),
+toread:test:GCS_Mavlink.cpp:    MSG_RC_CHANNELS_RAW, // only sent on a mavlink1 connection
+toread:test:GCS_Mavlink.cpp:const struct GCS_MAVLINK::stream_entries GCS_MAVLINK::all_stream_entries[] = {
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RAW_SENSORS),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTENDED_STATUS),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_POSITION),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RC_CHANNELS),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA1),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA2),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA3),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_PARAMS),
+toread:test:GCS_Mavlink.cpp:    MAV_STREAM_TERMINATOR // must have this at end of stream_entries
+toread:test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::handle_guided_request(AP_Mission::Mission_Command &cmd)
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration_baro(const mavlink_message_t &msg)
+toread:test:GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Disarm before calibration.");
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+toread:test:GCS_Mavlink.cpp:        //result = sub.mavlink_compassmot(chan);
+toread:test:GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "#CompassMot calibration not supported");
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_UNSUPPORTED;
+toread:test:GCS_Mavlink.cpp:    return GCS_MAVLINK::_handle_command_preflight_calibration(packet, msg);
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_do_set_roi(const Location &roi_loc)
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home_to_current_location(bool _lock) {
+toread:test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home(const Location& loc, bool _lock) {
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+toread:test:GCS_Mavlink.cpp:    case MAV_CMD_CONDITION_YAW:
+toread:test:GCS_Mavlink.cpp:        return handle_MAV_CMD_CONDITION_YAW(packet);
+toread:test:GCS_Mavlink.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+toread:test:GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_CHANGE_SPEED(packet);
+toread:test:GCS_Mavlink.cpp:    case MAV_CMD_DO_MOTOR_TEST:
+toread:test:GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_MOTOR_TEST(packet);
+toread:test:GCS_Mavlink.cpp:    case MAV_CMD_MISSION_START:
+toread:test:GCS_Mavlink.cpp:        return handle_MAV_CMD_MISSION_START(packet);
+toread:test:GCS_Mavlink.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+toread:test:GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LOITER_UNLIM(packet);
+toread:test:GCS_Mavlink.cpp:    case MAV_CMD_NAV_LAND:
+toread:test:GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LAND(packet);
+toread:test:GCS_Mavlink.cpp:    return GCS_MAVLINK::handle_command_int_packet(packet, msg);
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet)
+toread:test:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet)
+toread:test:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet)
+toread:test:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_DENIED;
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet)
+toread:test:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet)
+toread:test:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet)
+toread:test:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::handle_message(const mavlink_message_t &msg)
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_MANUAL_CONTROL: {     // MAV ID: 69
+toread:test:GCS_Mavlink.cpp:        mavlink_manual_control_t packet;
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_manual_control_decode(&msg, &packet);
+toread:test:GCS_Mavlink.cpp:        if (packet.target != sub.g.sysid_this_mav) {
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_RC_CHANNELS_OVERRIDE: {     // MAV ID: 70
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_ATTITUDE_TARGET: { // MAV ID: 82
+toread:test:GCS_Mavlink.cpp:        mavlink_set_attitude_target_t packet;
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_set_attitude_target_decode(&msg, &packet);
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_LOCAL_NED: {   // MAV ID: 84
+toread:test:GCS_Mavlink.cpp:        mavlink_set_position_target_local_ned_t packet;
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_set_position_target_local_ned_decode(&msg, &packet);
+toread:test:GCS_Mavlink.cpp:        if (packet.coordinate_frame != MAV_FRAME_LOCAL_NED &&
+toread:test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_LOCAL_OFFSET_NED &&
+toread:test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_NED &&
+toread:test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_OFFSET_NED &&
+toread:test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_FRD) {
+toread:test:GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+toread:test:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+toread:test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+toread:test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+toread:test:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_LOCAL_OFFSET_NED ||
+toread:test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+toread:test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+toread:test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+toread:test:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED || packet.coordinate_frame == MAV_FRAME_BODY_FRD || packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+toread:test:GCS_Mavlink.cpp:            yaw_relative = packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED;
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_GLOBAL_INT: {  // MAV ID: 86
+toread:test:GCS_Mavlink.cpp:        mavlink_set_position_target_global_int_t packet;
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_set_position_target_global_int_decode(&msg, &packet);
+toread:test:GCS_Mavlink.cpp:        bool z_ignore        = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+toread:test:GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+toread:test:GCS_Mavlink.cpp:         * bool force           = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_FORCE;
+toread:test:GCS_Mavlink.cpp:         * bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+toread:test:GCS_Mavlink.cpp:         * bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+toread:test:GCS_Mavlink.cpp:            if (!mavlink_coordinate_frame_to_location_alt_frame((MAV_FRAME)packet.coordinate_frame, frame)) {
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_DATA:
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_CHECK:
+toread:test:GCS_Mavlink.cpp:    // connected to a mavlink enabled subsystem
+toread:test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SYS_STATUS: {
+toread:test:GCS_Mavlink.cpp:        uint32_t MAV_SENSOR_WATER = 0x20000000;
+toread:test:GCS_Mavlink.cpp:        mavlink_sys_status_t packet;
+toread:test:GCS_Mavlink.cpp:        mavlink_msg_sys_status_decode(&msg, &packet);
+toread:test:GCS_Mavlink.cpp:        if ((packet.onboard_control_sensors_enabled & MAV_SENSOR_WATER) && !(packet.onboard_control_sensors_health & MAV_SENSOR_WATER)) {
+toread:test:GCS_Mavlink.cpp:        GCS_MAVLINK::handle_message(msg);
+toread:test:GCS_Mavlink.cpp:} // end handle mavlink
+toread:test:GCS_Mavlink.cpp:uint64_t GCS_MAVLINK_Sub::capabilities() const
+toread:test:GCS_Mavlink.cpp:    return (MAV_PROTOCOL_CAPABILITY_MISSION_FLOAT |
+toread:test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_MISSION_INT |
+toread:test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_LOCAL_NED |
+toread:test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_GLOBAL_INT |
+toread:test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_FLIGHT_TERMINATION |
+toread:test:GCS_Mavlink.cpp:            (sub.terrain.enabled() ? MAV_PROTOCOL_CAPABILITY_TERRAIN : 0) |
+toread:test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_ATTITUDE_TARGET |
+toread:test:GCS_Mavlink.cpp:            GCS_MAVLINK::capabilities()
+toread:test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_flight_termination(const mavlink_command_int_t &packet) {
+toread:test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+toread:test:GCS_Mavlink.cpp:    return MAV_RESULT_FAILED;
+toread:test:GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_alt() const {
+toread:test:GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_alt();
+toread:test:GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_relative_alt() const {
+toread:test:GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_relative_alt();
+toread:test:GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::high_latency_target_altitude() const
+toread:test:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_heading() const
+toread:test:GCS_Mavlink.cpp:uint16_t GCS_MAVLINK_Sub::high_latency_tgt_dist() const
+toread:test:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_airspeed() const
+toread:test:Sub.h:#include "GCS_Mavlink.h"
+toread:test:Sub.h:    friend class GCS_MAVLINK_Sub;
+toread:test:Sub.h:        mavlink_set_attitude_target_t packet;
+toread:test:Sub.h:    bool handle_do_motor_test(mavlink_command_int_t command);
+toread:test:ReleaseNotes.txt: - Set default BRD_RTC_TYPE to 3 (GPS and MAVLink)
+toread:test:ReleaseNotes.txt: - Support depth setpoints via MAVlink in Depth-Hold mode
+toread:test:ReleaseNotes.txt: - Support attitude setpoints via MAVlink in Depth-Hold and Stabilize modes
+toread:test:ReleaseNotes.txt: - Support for setting MAVLink message intervals
+toread:test:ReleaseNotes.txt:- Suppress repeated printing of "GPS detected as MAV" messages when no mavlink gps is connected
+toread:test:ReleaseNotes.txt:- Add support for PLAY_TUNE and LED_CONTROL mavlink commands
+toread:test:ReleaseNotes.txt:- Acknowledge MAV_CMD_PREFLIGHT_REBOOT_SHUTDOWN before shutting down
+toread:test:ReleaseNotes.txt:- Remove BASE_RESET and BASE_PRESS baro parameters. Barometer reset is now done via mavlink cmd.
+toread:test:ReleaseNotes.txt:- Implement parameter reset to defaults via mavlink cmd.
+toread:test:ReleaseNotes.txt:    - Unsupported mavlink messages
+toread:test:ReleaseNotes.txt:    a) GCS can use MAV_CMD_MISSION_START to start mission in AUTO even without pilot raising throttle 
+toread:test:ReleaseNotes.txt:    e) GCS can initiate takeoff even in Loiter, AltHold, PosHold and sport by issuing NAV_TAKEOFF mavlink command
+toread:test:ReleaseNotes.txt:4) Stop flight mode - causes vehicle to stop quickly, and does not respond to user input or waypoint movement via MAVLink.  Requires GPS, will be renamed to Brake mode.
+toread:test:ReleaseNotes.txt:    b) Camera control messages sent via MAVLink to smart cameras.  Allow control of camera zoom for upcoming IntelEdison/Sony QX1 camera control board
+toread:test:ReleaseNotes.txt:    a) SToRM32 gimbal support (using MAVLink)
+toread:test:ReleaseNotes.txt:11) CLI removed from APM1/2 to save flash space, critical functions moved to MAVLink:
+toread:test:failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Depth sensor error!");
+toread:test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "EKF bad");
+toread:test:failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Lost manual control");
+toread:test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal pressure critical!");
+toread:test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal temperature critical!");
+toread:test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Leak Detected");
+toread:test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "MYGCS: %u, heartbeat lost", g.sysid_my_gcs.get());
+toread:test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Crash detected");
+toread:test:failsafe.cpp:            gcs().send_text(MAV_SEVERITY_CRITICAL,"Failsafe terrain triggered");
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "waiting for a rangefinder reading");
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to hold range", sub.g.surftrak_depth * 0.01f);
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "wrong mode, rangefinder target not set");
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to set rangefinder target", sub.g.surftrak_depth * 0.01f);
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target below minimum, ignored");
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target above maximum, ignored");
+toread:test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "rangefinder target is %.2f meters", rangefinder_target_cm * 0.01f);
+toread:test:ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor is not connected.");
+toread:test:ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor error.");
+toread:test:ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+toread:test:ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+toread:test:ArduSub.cpp:    // no crosstrack error reported, see GCS_MAVLINK_Sub::send_nav_controller_output()
+toread:test:motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "10 second cooldown required after motor test");
+toread:test:motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL,"Disarm hardware safety switch before testing motors.");
+toread:test:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Arm motors before testing motors.");
+toread:test:motors.cpp:// MAV_CMD_DO_SET_MOTOR requests exceeds a timeout period
+toread:test:motors.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Motor test timed out!");
+toread:test:motors.cpp:bool Sub::handle_do_motor_test(mavlink_command_int_t command) {
+toread:test:motors.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "motor test initialization failed!");
+toread:test:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad test type %0.2f", (double)test_type);
+toread:test:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad throttle type %0.2f", (double)throttle_type);
+toread:test:Parameters.h:        k_param_sysid_this_mav,
+toread:test:Parameters.h:    AP_Int16        sysid_this_mav;
+toread:test:Parameters.h:    { "MNT1_DEFLT_MODE",     MAV_MOUNT_MODE_RC_TARGETING},
+toread:test:Parameters.cpp:    // @Param: SYSID_THISMAV
+toread:test:Parameters.cpp:    // @DisplayName: MAVLink system ID of this vehicle
+toread:test:Parameters.cpp:    // @Description: Allows setting an individual MAVLink system id for this vehicle to distinguish it from others on the same network
+toread:test:Parameters.cpp:    GSCALAR(sysid_this_mav, "SYSID_THISMAV",   MAV_SYSTEM_ID),
+toread:test:Parameters.cpp:    // @Description: bitmask of PIDs to send MAVLink PID_TUNING messages for
+toread:test:Parameters.cpp:    // @Description: Default gain at boot, must be in range [JS_GAIN_MIN , JS_GAIN_MAX]. Current gain value is accessible via NAMED_VALUE_FLOAT MAVLink message with name 'PilotGain'.
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[0],  gcs0,       "SR0_",     GCS_MAVLINK_Parameters),
+toread:test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 2
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[1],  gcs1,       "SR1_",     GCS_MAVLINK_Parameters),
+toread:test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 3
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[2],  gcs2,       "SR2_",     GCS_MAVLINK_Parameters),
+toread:test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 4
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[3],  gcs3,       "SR3_",     GCS_MAVLINK_Parameters),
+toread:test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 5
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[4],  gcs4,       "SR4_",     GCS_MAVLINK_Parameters),
+toread:test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 6
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[5],  gcs5,       "SR5_",     GCS_MAVLINK_Parameters),
+toread:test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 7
+toread:test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[6],  gcs6,       "SR6_",     GCS_MAVLINK_Parameters),
+toread:ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor is not connected.");
+toread:ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor error.");
+toread:ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+toread:ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+toread:ArduSub.cpp:    // no crosstrack error reported, see GCS_MAVLINK_Sub::send_nav_controller_output()
+toread:motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "10 second cooldown required after motor test");
+toread:motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL,"Disarm hardware safety switch before testing motors.");
+toread:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Arm motors before testing motors.");
+toread:motors.cpp:// MAV_CMD_DO_SET_MOTOR requests exceeds a timeout period
+toread:motors.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Motor test timed out!");
+toread:motors.cpp:bool Sub::handle_do_motor_test(mavlink_command_int_t command) {
+toread:motors.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "motor test initialization failed!");
+toread:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad test type %0.2f", (double)test_type);
+toread:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad throttle type %0.2f", (double)throttle_type);
+toread:Parameters.h:        k_param_sysid_this_mav,
+toread:Parameters.h:    AP_Int16        sysid_this_mav;
+toread:Parameters.h:    { "MNT1_DEFLT_MODE",     MAV_MOUNT_MODE_RC_TARGETING},
+toread:Parameters.cpp:    // @Param: SYSID_THISMAV
+toread:Parameters.cpp:    // @DisplayName: MAVLink system ID of this vehicle
+toread:Parameters.cpp:    // @Description: Allows setting an individual MAVLink system id for this vehicle to distinguish it from others on the same network
+toread:Parameters.cpp:    GSCALAR(sysid_this_mav, "SYSID_THISMAV",   MAV_SYSTEM_ID),
+toread:Parameters.cpp:    // @Description: bitmask of PIDs to send MAVLink PID_TUNING messages for
+toread:Parameters.cpp:    // @Description: Default gain at boot, must be in range [JS_GAIN_MIN , JS_GAIN_MAX]. Current gain value is accessible via NAMED_VALUE_FLOAT MAVLink message with name 'PilotGain'.
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[0],  gcs0,       "SR0_",     GCS_MAVLINK_Parameters),
+toread:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 2
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[1],  gcs1,       "SR1_",     GCS_MAVLINK_Parameters),
+toread:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 3
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[2],  gcs2,       "SR2_",     GCS_MAVLINK_Parameters),
+toread:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 4
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[3],  gcs3,       "SR3_",     GCS_MAVLINK_Parameters),
+toread:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 5
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[4],  gcs4,       "SR4_",     GCS_MAVLINK_Parameters),
+toread:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 6
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[5],  gcs5,       "SR5_",     GCS_MAVLINK_Parameters),
+toread:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 7
+toread:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+toread:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[6],  gcs6,       "SR6_",     GCS_MAVLINK_Parameters),
+Binary file .Sub.h.swp matches
+defines.h:// for mavlink SET_POSITION_TARGET messages
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE        (1<<2)
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE      ((1<<0) | (1<<1) | (1<<2))
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE      ((1<<3) | (1<<4) | (1<<5))
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE      ((1<<6) | (1<<7) | (1<<8))
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_FORCE           (1<<9)
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE      (1<<10)
+defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE (1<<11)
+config.h:#ifndef MAV_SYSTEM_ID
+config.h:# define MAV_SYSTEM_ID          1
+joystick.cpp:            arming.disarm(AP_Arming::Method::MAVLINK);
+joystick.cpp:            arming.arm(AP_Arming::Method::MAVLINK);
+joystick.cpp:        arming.arm(AP_Arming::Method::MAVLINK);
+joystick.cpp:        arming.disarm(AP_Arming::Method::MAVLINK);
+joystick.cpp:        // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+joystick.cpp:        camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 2");
+joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 1");
+joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain: %2.0f%%",(double)gain*100);
+joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Set");
+joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Disabled");
+joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Attitude Control");
+joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Movement Control");
+GCS_Sub.h:#include <GCS_MAVLink/GCS.h>
+GCS_Sub.h:#include "GCS_Mavlink.h"
+GCS_Sub.h:    // GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override;
+GCS_Sub.h:    // const GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override const;
+GCS_Sub.h:    GCS_MAVLINK_CHAN_METHOD_DEFINITIONS(GCS_MAVLINK_Sub);
+GCS_Sub.h:    MAV_TYPE frame_type() const override;
+GCS_Sub.h:    uint8_t sysid_this_mav() const override;
+GCS_Sub.h:    // mavlink messages.  We want to prioritise the main flight
+GCS_Sub.h:    GCS_MAVLINK_Sub *new_gcs_mavlink_backend(GCS_MAVLINK_Parameters &params,
+GCS_Sub.h:        return new GCS_MAVLINK_Sub(params, uart);
+GCS_Mavlink.cpp:#include "GCS_Mavlink.h"
+GCS_Mavlink.cpp:MAV_TYPE GCS_Sub::frame_type() const
+GCS_Mavlink.cpp:    return MAV_TYPE_SUBMARINE;
+GCS_Mavlink.cpp:MAV_MODE GCS_MAVLINK_Sub::base_mode() const
+GCS_Mavlink.cpp:    uint8_t _base_mode = MAV_MODE_FLAG_STABILIZE_ENABLED;
+GCS_Mavlink.cpp:    // MAVLink enabled ground station can work out something about
+GCS_Mavlink.cpp:    // what the MAV is up to. The actual bit values are highly
+GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_GUIDED_ENABLED;
+GCS_Mavlink.cpp:        // note that MAV_MODE_FLAG_AUTO_ENABLED does not match what
+GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_MANUAL_INPUT_ENABLED;
+GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_SAFETY_ARMED;
+GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_CUSTOM_MODE_ENABLED;
+GCS_Mavlink.cpp:    return (MAV_MODE)_base_mode;
+GCS_Mavlink.cpp:MAV_STATE GCS_MAVLINK_Sub::vehicle_system_status() const
+GCS_Mavlink.cpp:        return MAV_STATE_CRITICAL;
+GCS_Mavlink.cpp:        return MAV_STATE_ACTIVE;
+GCS_Mavlink.cpp:    return MAV_STATE_STANDBY;
+GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_banner()
+GCS_Mavlink.cpp:    GCS_MAVLINK::send_banner();
+GCS_Mavlink.cpp:    send_text(MAV_SEVERITY_INFO, "Frame: %s", sub.motors.get_frame_string());
+GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_nav_controller_output() const
+GCS_Mavlink.cpp:    mavlink_msg_nav_controller_output_send(
+GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::vfr_hud_throttle() const
+GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_scaled_pressure3()
+GCS_Mavlink.cpp:    mavlink_msg_scaled_pressure3_send(
+GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::send_info()
+GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_pid_tuning()
+GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ROLL,
+GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_PITCH,
+GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_YAW,
+GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ACCZ,
+GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::sysid_my_gcs() const
+GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::try_send_message(enum ap_message id)
+GCS_Mavlink.cpp:        return GCS_MAVLINK::try_send_message(id);
+GCS_Mavlink.cpp:const AP_Param::GroupInfo GCS_MAVLINK_Parameters::var_info[] = {
+GCS_Mavlink.cpp:    AP_GROUPINFO("RAW_SENS", 0, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RAW_SENSORS],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("EXT_STAT", 1, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTENDED_STATUS],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("RC_CHAN",  2, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RC_CHANNELS],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("POSITION", 4, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_POSITION],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA1",   5, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA1],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA2",   6, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA2],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA3",   7, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA3],  0),
+GCS_Mavlink.cpp:    AP_GROUPINFO("PARAMS",   8, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_PARAMS],  0),
+GCS_Mavlink.cpp:    MSG_RC_CHANNELS_RAW, // only sent on a mavlink1 connection
+GCS_Mavlink.cpp:const struct GCS_MAVLINK::stream_entries GCS_MAVLINK::all_stream_entries[] = {
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RAW_SENSORS),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTENDED_STATUS),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_POSITION),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RC_CHANNELS),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA1),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA2),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA3),
+GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_PARAMS),
+GCS_Mavlink.cpp:    MAV_STREAM_TERMINATOR // must have this at end of stream_entries
+GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::handle_guided_request(AP_Mission::Mission_Command &cmd)
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration_baro(const mavlink_message_t &msg)
+GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Disarm before calibration.");
+GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+GCS_Mavlink.cpp:        //result = sub.mavlink_compassmot(chan);
+GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "#CompassMot calibration not supported");
+GCS_Mavlink.cpp:        return MAV_RESULT_UNSUPPORTED;
+GCS_Mavlink.cpp:    return GCS_MAVLINK::_handle_command_preflight_calibration(packet, msg);
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_do_set_roi(const Location &roi_loc)
+GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home_to_current_location(bool _lock) {
+GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home(const Location& loc, bool _lock) {
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+GCS_Mavlink.cpp:    case MAV_CMD_CONDITION_YAW:
+GCS_Mavlink.cpp:        return handle_MAV_CMD_CONDITION_YAW(packet);
+GCS_Mavlink.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_CHANGE_SPEED(packet);
+GCS_Mavlink.cpp:    case MAV_CMD_DO_MOTOR_TEST:
+GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_MOTOR_TEST(packet);
+GCS_Mavlink.cpp:    case MAV_CMD_MISSION_START:
+GCS_Mavlink.cpp:        return handle_MAV_CMD_MISSION_START(packet);
+GCS_Mavlink.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LOITER_UNLIM(packet);
+GCS_Mavlink.cpp:    case MAV_CMD_NAV_LAND:
+GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LAND(packet);
+GCS_Mavlink.cpp:    return GCS_MAVLINK::handle_command_int_packet(packet, msg);
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet)
+GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet)
+GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet)
+GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:        return MAV_RESULT_DENIED;
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet)
+GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet)
+GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet)
+GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::handle_message(const mavlink_message_t &msg)
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_MANUAL_CONTROL: {     // MAV ID: 69
+GCS_Mavlink.cpp:        mavlink_manual_control_t packet;
+GCS_Mavlink.cpp:        mavlink_msg_manual_control_decode(&msg, &packet);
+GCS_Mavlink.cpp:        if (packet.target != sub.g.sysid_this_mav) {
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_RC_CHANNELS_OVERRIDE: {     // MAV ID: 70
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_ATTITUDE_TARGET: { // MAV ID: 82
+GCS_Mavlink.cpp:        mavlink_set_attitude_target_t packet;
+GCS_Mavlink.cpp:        mavlink_msg_set_attitude_target_decode(&msg, &packet);
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_LOCAL_NED: {   // MAV ID: 84
+GCS_Mavlink.cpp:        mavlink_set_position_target_local_ned_t packet;
+GCS_Mavlink.cpp:        mavlink_msg_set_position_target_local_ned_decode(&msg, &packet);
+GCS_Mavlink.cpp:        if (packet.coordinate_frame != MAV_FRAME_LOCAL_NED &&
+GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_LOCAL_OFFSET_NED &&
+GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_NED &&
+GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_OFFSET_NED &&
+GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_FRD) {
+GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+GCS_Mavlink.cpp:        bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+GCS_Mavlink.cpp:        bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_LOCAL_OFFSET_NED ||
+GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED || packet.coordinate_frame == MAV_FRAME_BODY_FRD || packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+GCS_Mavlink.cpp:            yaw_relative = packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED;
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_GLOBAL_INT: {  // MAV ID: 86
+GCS_Mavlink.cpp:        mavlink_set_position_target_global_int_t packet;
+GCS_Mavlink.cpp:        mavlink_msg_set_position_target_global_int_decode(&msg, &packet);
+GCS_Mavlink.cpp:        bool z_ignore        = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE;
+GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+GCS_Mavlink.cpp:         * bool force           = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_FORCE;
+GCS_Mavlink.cpp:         * bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+GCS_Mavlink.cpp:         * bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+GCS_Mavlink.cpp:            if (!mavlink_coordinate_frame_to_location_alt_frame((MAV_FRAME)packet.coordinate_frame, frame)) {
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_DATA:
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_CHECK:
+GCS_Mavlink.cpp:    // connected to a mavlink enabled subsystem
+GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SYS_STATUS: {
+GCS_Mavlink.cpp:        uint32_t MAV_SENSOR_WATER = 0x20000000;
+GCS_Mavlink.cpp:        mavlink_sys_status_t packet;
+GCS_Mavlink.cpp:        mavlink_msg_sys_status_decode(&msg, &packet);
+GCS_Mavlink.cpp:        if ((packet.onboard_control_sensors_enabled & MAV_SENSOR_WATER) && !(packet.onboard_control_sensors_health & MAV_SENSOR_WATER)) {
+GCS_Mavlink.cpp:        GCS_MAVLINK::handle_message(msg);
+GCS_Mavlink.cpp:} // end handle mavlink
+GCS_Mavlink.cpp:uint64_t GCS_MAVLINK_Sub::capabilities() const
+GCS_Mavlink.cpp:    return (MAV_PROTOCOL_CAPABILITY_MISSION_FLOAT |
+GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_MISSION_INT |
+GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_LOCAL_NED |
+GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_GLOBAL_INT |
+GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_FLIGHT_TERMINATION |
+GCS_Mavlink.cpp:            (sub.terrain.enabled() ? MAV_PROTOCOL_CAPABILITY_TERRAIN : 0) |
+GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_ATTITUDE_TARGET |
+GCS_Mavlink.cpp:            GCS_MAVLINK::capabilities()
+GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_flight_termination(const mavlink_command_int_t &packet) {
+GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+GCS_Mavlink.cpp:    return MAV_RESULT_FAILED;
+GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_alt() const {
+GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_alt();
+GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_relative_alt() const {
+GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_relative_alt();
+GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::high_latency_target_altitude() const
+GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_heading() const
+GCS_Mavlink.cpp:uint16_t GCS_MAVLINK_Sub::high_latency_tgt_dist() const
+GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_airspeed() const
+Sub.h:#include "GCS_Mavlink.h"
+Sub.h:    friend class GCS_MAVLINK_Sub;
+Sub.h:        mavlink_set_attitude_target_t packet;
+Sub.h:    bool handle_do_motor_test(mavlink_command_int_t command);
+ReleaseNotes.txt: - Set default BRD_RTC_TYPE to 3 (GPS and MAVLink)
+ReleaseNotes.txt: - Support depth setpoints via MAVlink in Depth-Hold mode
+ReleaseNotes.txt: - Support attitude setpoints via MAVlink in Depth-Hold and Stabilize modes
+ReleaseNotes.txt: - Support for setting MAVLink message intervals
+ReleaseNotes.txt:- Suppress repeated printing of "GPS detected as MAV" messages when no mavlink gps is connected
+ReleaseNotes.txt:- Add support for PLAY_TUNE and LED_CONTROL mavlink commands
+ReleaseNotes.txt:- Acknowledge MAV_CMD_PREFLIGHT_REBOOT_SHUTDOWN before shutting down
+ReleaseNotes.txt:- Remove BASE_RESET and BASE_PRESS baro parameters. Barometer reset is now done via mavlink cmd.
+ReleaseNotes.txt:- Implement parameter reset to defaults via mavlink cmd.
+ReleaseNotes.txt:    - Unsupported mavlink messages
+ReleaseNotes.txt:    a) GCS can use MAV_CMD_MISSION_START to start mission in AUTO even without pilot raising throttle 
+ReleaseNotes.txt:    e) GCS can initiate takeoff even in Loiter, AltHold, PosHold and sport by issuing NAV_TAKEOFF mavlink command
+ReleaseNotes.txt:4) Stop flight mode - causes vehicle to stop quickly, and does not respond to user input or waypoint movement via MAVLink.  Requires GPS, will be renamed to Brake mode.
+ReleaseNotes.txt:    b) Camera control messages sent via MAVLink to smart cameras.  Allow control of camera zoom for upcoming IntelEdison/Sony QX1 camera control board
+ReleaseNotes.txt:    a) SToRM32 gimbal support (using MAVLink)
+ReleaseNotes.txt:11) CLI removed from APM1/2 to save flash space, critical functions moved to MAVLink:
+failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Depth sensor error!");
+failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "EKF bad");
+failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Lost manual control");
+failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal pressure critical!");
+failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal temperature critical!");
+failsafe.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Leak Detected");
+failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "MYGCS: %u, heartbeat lost", g.sysid_my_gcs.get());
+failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Crash detected");
+failsafe.cpp:            gcs().send_text(MAV_SEVERITY_CRITICAL,"Failsafe terrain triggered");
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "waiting for a rangefinder reading");
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to hold range", sub.g.surftrak_depth * 0.01f);
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "wrong mode, rangefinder target not set");
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to set rangefinder target", sub.g.surftrak_depth * 0.01f);
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target below minimum, ignored");
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target above maximum, ignored");
+mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "rangefinder target is %.2f meters", rangefinder_target_cm * 0.01f);
+test:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Terrain data (rangefinder) not available");
+test:mode_auto.cpp:        // TO-DO: expand handling of the do_nav_roi to support all modes of the MAVLink.  Currently we only handle mode 4 (see below)
+test:mode_auto.cpp:    gcs().send_text(MAV_SEVERITY_WARNING, "Attempting auto failsafe recovery");
+test:mode_auto.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "Terrain failsafe recovery successful!");
+test:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Terrain failsafe recovery failure: No Rangefinder!");
+test:mode_auto.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Terrain failsafe recovery timeout!");
+test:commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above home must be negative");
+test:commands_logic.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Alt above terrain must be positive");
+test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Bad alt frame");
+test:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT:                  // 16  Navigate to Waypoint
+test:commands_logic.cpp:    case MAV_CMD_NAV_LAND:              // 21 LAND to Waypoint
+test:commands_logic.cpp:    case MAV_CMD_NAV_RETURN_TO_LAUNCH:
+test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:              // 17 Loiter indefinitely
+test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TURNS:              //18 Loiter N Times
+test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TIME:              // 19
+test:commands_logic.cpp:    case MAV_CMD_NAV_GUIDED_ENABLE:             // 92  accept navigation commands from external nav computer
+test:commands_logic.cpp:    case MAV_CMD_NAV_DELAY:                    // 93 Delay the next navigation command
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_DELAY:             // 112
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:             // 114
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:             // 115
+test:commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:             // 178
+test:commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:             // 179
+test:commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:                // 201
+test:commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:          // 205
+test:commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:                      // 222  accept guided mode limits
+test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Ignoring command %d", cmd.id);
+test:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT:
+test:commands_logic.cpp:    case MAV_CMD_NAV_LAND:
+test:commands_logic.cpp:    case MAV_CMD_NAV_RETURN_TO_LAUNCH:
+test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TURNS:
+test:commands_logic.cpp:    case MAV_CMD_NAV_LOITER_TIME:
+test:commands_logic.cpp:    case MAV_CMD_NAV_GUIDED_ENABLE:
+test:commands_logic.cpp:    case MAV_CMD_NAV_DELAY:
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_DELAY:
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_DISTANCE:
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+test:commands_logic.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+test:commands_logic.cpp:    case MAV_CMD_DO_SET_HOME:
+test:commands_logic.cpp:    case MAV_CMD_DO_SET_ROI:
+test:commands_logic.cpp:    case MAV_CMD_DO_MOUNT_CONTROL:
+test:commands_logic.cpp:    case MAV_CMD_DO_SET_CAM_TRIGG_DIST:
+test:commands_logic.cpp:    case MAV_CMD_DO_GUIDED_LIMITS:
+test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Skipping invalid cmd #%i",cmd.id);
+test:commands_logic.cpp:    // In mavproxy misseditor: Abs = 0 = ALT_FRAME_ABSOLUTE
+test:commands_logic.cpp:    //    2 = ALT_FRAME_ABOVE_ORIGIN, not an option in mavproxy misseditor
+test:commands_logic.cpp:    gcs().send_text(MAV_SEVERITY_INFO, "Delaying %u sec", (unsigned)(nav_delay_time_max_ms/1000));
+test:commands_logic.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Reached command #%i",cmd.index);
+test:commands_logic.cpp:    case MAV_CMD_NAV_WAYPOINT: {
+test:commands_logic.cpp:    case MAV_CMD_CONDITION_YAW:
+test:commands_logic.cpp:// do_roi - starts actions required by MAV_CMD_NAV_ROI
+test:commands_logic.cpp://  TO-DO: add support for other features of MAV_CMD_DO_SET_ROI including pointing at a given waypoint
+test:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s requires position", new_flightmode->name());
+test:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s need alt estimate", new_flightmode->name());
+test:mode.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Flight mode change failed %s", new_flightmode->name());
+test:GCS_Mavlink.h:#include <GCS_MAVLink/GCS.h>
+test:GCS_Mavlink.h:class GCS_MAVLINK_Sub : public GCS_MAVLINK {
+test:GCS_Mavlink.h:    using GCS_MAVLINK::GCS_MAVLINK;
+test:GCS_Mavlink.h:    MAV_RESULT handle_flight_termination(const mavlink_command_int_t &packet) override;
+test:GCS_Mavlink.h:    MAV_RESULT handle_command_do_set_roi(const Location &roi_loc) override;
+test:GCS_Mavlink.h:    MAV_RESULT _handle_command_preflight_calibration_baro(const mavlink_message_t &msg) override;
+test:GCS_Mavlink.h:    MAV_RESULT _handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg) override;
+test:GCS_Mavlink.h:    MAV_RESULT handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg) override;
+test:GCS_Mavlink.h:    void handle_message(const mavlink_message_t &msg) override;
+test:GCS_Mavlink.h:    MAV_MODE base_mode() const override;
+test:GCS_Mavlink.h:    MAV_STATE vehicle_system_status() const override;
+test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet);
+test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet);
+test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet);
+test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet);
+test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet);
+test:GCS_Mavlink.h:    MAV_RESULT handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet);
+test:system.cpp:    // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+test:system.cpp:    camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+test:GCS_Sub.cpp:uint8_t GCS_Sub::sysid_this_mav() const
+test:GCS_Sub.cpp:    return sub.g.sysid_this_mav;
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ANGULAR_RATE_CONTROL |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_ATTITUDE_STABILIZATION |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_YAW_POSITION;
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL |
+test:GCS_Sub.cpp:        MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+test:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_Z_ALTITUDE_CONTROL;
+test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+test:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_XY_POSITION_CONTROL;
+test:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+test:GCS_Sub.cpp:    control_sensors_health &= ~MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE; // check the internal barometer only
+test:GCS_Sub.cpp:        control_sensors_health |= MAV_SYS_STATUS_SENSOR_ABSOLUTE_PRESSURE;
+test:GCS_Sub.cpp:        //control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+test:GCS_Sub.cpp:        //control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+test:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_TERRAIN;
+test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_TERRAIN;
+test:GCS_Sub.cpp:        control_sensors_health  |= MAV_SYS_STATUS_TERRAIN;
+test:GCS_Sub.cpp:        control_sensors_present |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+test:GCS_Sub.cpp:        control_sensors_enabled |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+test:GCS_Sub.cpp:            control_sensors_health |= MAV_SYS_STATUS_SENSOR_LASER_POSITION;
+test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is ok!", current_motor + 1);
+test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Thruster %d is reversed! Saving it!", current_motor + 1);
+test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_INFO, "Bad thrust read, trying to push the other way...");
+test:mode_motordetect.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "Failed! Please check Thruster %d and frame setup!", current_motor + 1);
+test:mode_motordetect.cpp:            gcs().send_text(MAV_SEVERITY_WARNING, "Motor direction detection is complete.");
+test:defines.h:// for mavlink SET_POSITION_TARGET messages
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE        (1<<2)
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE      ((1<<0) | (1<<1) | (1<<2))
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE      ((1<<3) | (1<<4) | (1<<5))
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE      ((1<<6) | (1<<7) | (1<<8))
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_FORCE           (1<<9)
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE      (1<<10)
+test:defines.h:#define MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE (1<<11)
+test:config.h:#ifndef MAV_SYSTEM_ID
+test:config.h:# define MAV_SYSTEM_ID          1
+test:joystick.cpp:            arming.disarm(AP_Arming::Method::MAVLINK);
+test:joystick.cpp:            arming.arm(AP_Arming::Method::MAVLINK);
+test:joystick.cpp:        arming.arm(AP_Arming::Method::MAVLINK);
+test:joystick.cpp:        arming.disarm(AP_Arming::Method::MAVLINK);
+test:joystick.cpp:        // for some reason the call to set_angle_targets changes the mode to mavlink targeting!
+test:joystick.cpp:        camera_mount.set_mode(MAV_MOUNT_MODE_RC_TARGETING);
+test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 2");
+test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"Video Toggle: Source 1");
+test:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain: %2.0f%%",(double)gain*100);
+test:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+test:joystick.cpp:            gcs().send_text(MAV_SEVERITY_INFO,"#Gain is %2.0f%%",(double)gain*100);
+test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Set");
+test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO,"#Input Hold Disabled");
+test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Attitude Control");
+test:joystick.cpp:                gcs().send_text(MAV_SEVERITY_INFO, "#Movement Control");
+test:GCS_Sub.h:#include <GCS_MAVLink/GCS.h>
+test:GCS_Sub.h:#include "GCS_Mavlink.h"
+test:GCS_Sub.h:    // GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override;
+test:GCS_Sub.h:    // const GCS_MAVLINK_XXXX *chan(const uint8_t ofs) override const;
+test:GCS_Sub.h:    GCS_MAVLINK_CHAN_METHOD_DEFINITIONS(GCS_MAVLINK_Sub);
+test:GCS_Sub.h:    MAV_TYPE frame_type() const override;
+test:GCS_Sub.h:    uint8_t sysid_this_mav() const override;
+test:GCS_Sub.h:    // mavlink messages.  We want to prioritise the main flight
+test:GCS_Sub.h:    GCS_MAVLINK_Sub *new_gcs_mavlink_backend(GCS_MAVLINK_Parameters &params,
+test:GCS_Sub.h:        return new GCS_MAVLINK_Sub(params, uart);
+test:GCS_Mavlink.cpp:#include "GCS_Mavlink.h"
+test:GCS_Mavlink.cpp:MAV_TYPE GCS_Sub::frame_type() const
+test:GCS_Mavlink.cpp:    return MAV_TYPE_SUBMARINE;
+test:GCS_Mavlink.cpp:MAV_MODE GCS_MAVLINK_Sub::base_mode() const
+test:GCS_Mavlink.cpp:    uint8_t _base_mode = MAV_MODE_FLAG_STABILIZE_ENABLED;
+test:GCS_Mavlink.cpp:    // MAVLink enabled ground station can work out something about
+test:GCS_Mavlink.cpp:    // what the MAV is up to. The actual bit values are highly
+test:GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_GUIDED_ENABLED;
+test:GCS_Mavlink.cpp:        // note that MAV_MODE_FLAG_AUTO_ENABLED does not match what
+test:GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_MANUAL_INPUT_ENABLED;
+test:GCS_Mavlink.cpp:        _base_mode |= MAV_MODE_FLAG_SAFETY_ARMED;
+test:GCS_Mavlink.cpp:    _base_mode |= MAV_MODE_FLAG_CUSTOM_MODE_ENABLED;
+test:GCS_Mavlink.cpp:    return (MAV_MODE)_base_mode;
+test:GCS_Mavlink.cpp:MAV_STATE GCS_MAVLINK_Sub::vehicle_system_status() const
+test:GCS_Mavlink.cpp:        return MAV_STATE_CRITICAL;
+test:GCS_Mavlink.cpp:        return MAV_STATE_ACTIVE;
+test:GCS_Mavlink.cpp:    return MAV_STATE_STANDBY;
+test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_banner()
+test:GCS_Mavlink.cpp:    GCS_MAVLINK::send_banner();
+test:GCS_Mavlink.cpp:    send_text(MAV_SEVERITY_INFO, "Frame: %s", sub.motors.get_frame_string());
+test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_nav_controller_output() const
+test:GCS_Mavlink.cpp:    mavlink_msg_nav_controller_output_send(
+test:GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::vfr_hud_throttle() const
+test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_scaled_pressure3()
+test:GCS_Mavlink.cpp:    mavlink_msg_scaled_pressure3_send(
+test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::send_info()
+test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::send_pid_tuning()
+test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ROLL,
+test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_PITCH,
+test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_YAW,
+test:GCS_Mavlink.cpp:        mavlink_msg_pid_tuning_send(chan, PID_TUNING_ACCZ,
+test:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::sysid_my_gcs() const
+test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::try_send_message(enum ap_message id)
+test:GCS_Mavlink.cpp:        return GCS_MAVLINK::try_send_message(id);
+test:GCS_Mavlink.cpp:const AP_Param::GroupInfo GCS_MAVLINK_Parameters::var_info[] = {
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("RAW_SENS", 0, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RAW_SENSORS],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXT_STAT", 1, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTENDED_STATUS],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("RC_CHAN",  2, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_RC_CHANNELS],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("POSITION", 4, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_POSITION],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA1",   5, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA1],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA2",   6, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA2],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("EXTRA3",   7, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_EXTRA3],  0),
+test:GCS_Mavlink.cpp:    AP_GROUPINFO("PARAMS",   8, GCS_MAVLINK_Parameters, streamRates[GCS_MAVLINK::STREAM_PARAMS],  0),
+test:GCS_Mavlink.cpp:    MSG_RC_CHANNELS_RAW, // only sent on a mavlink1 connection
+test:GCS_Mavlink.cpp:const struct GCS_MAVLINK::stream_entries GCS_MAVLINK::all_stream_entries[] = {
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RAW_SENSORS),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTENDED_STATUS),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_POSITION),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_RC_CHANNELS),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA1),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA2),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_EXTRA3),
+test:GCS_Mavlink.cpp:    MAV_STREAM_ENTRY(STREAM_PARAMS),
+test:GCS_Mavlink.cpp:    MAV_STREAM_TERMINATOR // must have this at end of stream_entries
+test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::handle_guided_request(AP_Mission::Mission_Command &cmd)
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration_baro(const mavlink_message_t &msg)
+test:GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Disarm before calibration.");
+test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::_handle_command_preflight_calibration(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+test:GCS_Mavlink.cpp:        //result = sub.mavlink_compassmot(chan);
+test:GCS_Mavlink.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "#CompassMot calibration not supported");
+test:GCS_Mavlink.cpp:        return MAV_RESULT_UNSUPPORTED;
+test:GCS_Mavlink.cpp:    return GCS_MAVLINK::_handle_command_preflight_calibration(packet, msg);
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_do_set_roi(const Location &roi_loc)
+test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:    return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home_to_current_location(bool _lock) {
+test:GCS_Mavlink.cpp:bool GCS_MAVLINK_Sub::set_home(const Location& loc, bool _lock) {
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_command_int_packet(const mavlink_command_int_t &packet, const mavlink_message_t &msg)
+test:GCS_Mavlink.cpp:    case MAV_CMD_CONDITION_YAW:
+test:GCS_Mavlink.cpp:        return handle_MAV_CMD_CONDITION_YAW(packet);
+test:GCS_Mavlink.cpp:    case MAV_CMD_DO_CHANGE_SPEED:
+test:GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_CHANGE_SPEED(packet);
+test:GCS_Mavlink.cpp:    case MAV_CMD_DO_MOTOR_TEST:
+test:GCS_Mavlink.cpp:        return handle_MAV_CMD_DO_MOTOR_TEST(packet);
+test:GCS_Mavlink.cpp:    case MAV_CMD_MISSION_START:
+test:GCS_Mavlink.cpp:        return handle_MAV_CMD_MISSION_START(packet);
+test:GCS_Mavlink.cpp:    case MAV_CMD_NAV_LOITER_UNLIM:
+test:GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LOITER_UNLIM(packet);
+test:GCS_Mavlink.cpp:    case MAV_CMD_NAV_LAND:
+test:GCS_Mavlink.cpp:        return handle_MAV_CMD_NAV_LAND(packet);
+test:GCS_Mavlink.cpp:    return GCS_MAVLINK::handle_command_int_packet(packet, msg);
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LOITER_UNLIM(const mavlink_command_int_t &packet)
+test:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_NAV_LAND(const mavlink_command_int_t &packet)
+test:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_CONDITION_YAW(const mavlink_command_int_t &packet)
+test:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_DENIED;
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_CHANGE_SPEED(const mavlink_command_int_t &packet)
+test:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_MISSION_START(const mavlink_command_int_t &packet)
+test:GCS_Mavlink.cpp:            return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_MAV_CMD_DO_MOTOR_TEST(const mavlink_command_int_t &packet)
+test:GCS_Mavlink.cpp:            return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:void GCS_MAVLINK_Sub::handle_message(const mavlink_message_t &msg)
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_MANUAL_CONTROL: {     // MAV ID: 69
+test:GCS_Mavlink.cpp:        mavlink_manual_control_t packet;
+test:GCS_Mavlink.cpp:        mavlink_msg_manual_control_decode(&msg, &packet);
+test:GCS_Mavlink.cpp:        if (packet.target != sub.g.sysid_this_mav) {
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_RC_CHANNELS_OVERRIDE: {     // MAV ID: 70
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_ATTITUDE_TARGET: { // MAV ID: 82
+test:GCS_Mavlink.cpp:        mavlink_set_attitude_target_t packet;
+test:GCS_Mavlink.cpp:        mavlink_msg_set_attitude_target_decode(&msg, &packet);
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_LOCAL_NED: {   // MAV ID: 84
+test:GCS_Mavlink.cpp:        mavlink_set_position_target_local_ned_t packet;
+test:GCS_Mavlink.cpp:        mavlink_msg_set_position_target_local_ned_decode(&msg, &packet);
+test:GCS_Mavlink.cpp:        if (packet.coordinate_frame != MAV_FRAME_LOCAL_NED &&
+test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_LOCAL_OFFSET_NED &&
+test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_NED &&
+test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_OFFSET_NED &&
+test:GCS_Mavlink.cpp:                packet.coordinate_frame != MAV_FRAME_BODY_FRD) {
+test:GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+test:GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+test:GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+test:GCS_Mavlink.cpp:        bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+test:GCS_Mavlink.cpp:        bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+test:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+test:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_LOCAL_OFFSET_NED ||
+test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_NED ||
+test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_FRD ||
+test:GCS_Mavlink.cpp:                    packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+test:GCS_Mavlink.cpp:            if (packet.coordinate_frame == MAV_FRAME_BODY_NED || packet.coordinate_frame == MAV_FRAME_BODY_FRD || packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED) {
+test:GCS_Mavlink.cpp:            yaw_relative = packet.coordinate_frame == MAV_FRAME_BODY_OFFSET_NED;
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SET_POSITION_TARGET_GLOBAL_INT: {  // MAV ID: 86
+test:GCS_Mavlink.cpp:        mavlink_set_position_target_global_int_t packet;
+test:GCS_Mavlink.cpp:        mavlink_msg_set_position_target_global_int_decode(&msg, &packet);
+test:GCS_Mavlink.cpp:        bool z_ignore        = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_Z_IGNORE;
+test:GCS_Mavlink.cpp:        bool pos_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_POS_IGNORE;
+test:GCS_Mavlink.cpp:        bool vel_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_VEL_IGNORE;
+test:GCS_Mavlink.cpp:        bool acc_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_ACC_IGNORE;
+test:GCS_Mavlink.cpp:         * bool force           = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_FORCE;
+test:GCS_Mavlink.cpp:         * bool yaw_ignore      = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_IGNORE;
+test:GCS_Mavlink.cpp:         * bool yaw_rate_ignore = packet.type_mask & MAVLINK_SET_POS_TYPE_MASK_YAW_RATE_IGNORE;
+test:GCS_Mavlink.cpp:            if (!mavlink_coordinate_frame_to_location_alt_frame((MAV_FRAME)packet.coordinate_frame, frame)) {
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_DATA:
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_TERRAIN_CHECK:
+test:GCS_Mavlink.cpp:    // connected to a mavlink enabled subsystem
+test:GCS_Mavlink.cpp:    case MAVLINK_MSG_ID_SYS_STATUS: {
+test:GCS_Mavlink.cpp:        uint32_t MAV_SENSOR_WATER = 0x20000000;
+test:GCS_Mavlink.cpp:        mavlink_sys_status_t packet;
+test:GCS_Mavlink.cpp:        mavlink_msg_sys_status_decode(&msg, &packet);
+test:GCS_Mavlink.cpp:        if ((packet.onboard_control_sensors_enabled & MAV_SENSOR_WATER) && !(packet.onboard_control_sensors_health & MAV_SENSOR_WATER)) {
+test:GCS_Mavlink.cpp:        GCS_MAVLINK::handle_message(msg);
+test:GCS_Mavlink.cpp:} // end handle mavlink
+test:GCS_Mavlink.cpp:uint64_t GCS_MAVLINK_Sub::capabilities() const
+test:GCS_Mavlink.cpp:    return (MAV_PROTOCOL_CAPABILITY_MISSION_FLOAT |
+test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_MISSION_INT |
+test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_LOCAL_NED |
+test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_POSITION_TARGET_GLOBAL_INT |
+test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_FLIGHT_TERMINATION |
+test:GCS_Mavlink.cpp:            (sub.terrain.enabled() ? MAV_PROTOCOL_CAPABILITY_TERRAIN : 0) |
+test:GCS_Mavlink.cpp:            MAV_PROTOCOL_CAPABILITY_SET_ATTITUDE_TARGET |
+test:GCS_Mavlink.cpp:            GCS_MAVLINK::capabilities()
+test:GCS_Mavlink.cpp:MAV_RESULT GCS_MAVLINK_Sub::handle_flight_termination(const mavlink_command_int_t &packet) {
+test:GCS_Mavlink.cpp:        return MAV_RESULT_ACCEPTED;
+test:GCS_Mavlink.cpp:    return MAV_RESULT_FAILED;
+test:GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_alt() const {
+test:GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_alt();
+test:GCS_Mavlink.cpp:int32_t GCS_MAVLINK_Sub::global_position_int_relative_alt() const {
+test:GCS_Mavlink.cpp:    return GCS_MAVLINK::global_position_int_relative_alt();
+test:GCS_Mavlink.cpp:int16_t GCS_MAVLINK_Sub::high_latency_target_altitude() const
+test:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_heading() const
+test:GCS_Mavlink.cpp:uint16_t GCS_MAVLINK_Sub::high_latency_tgt_dist() const
+test:GCS_Mavlink.cpp:uint8_t GCS_MAVLINK_Sub::high_latency_tgt_airspeed() const
+test:Sub.h:#include "GCS_Mavlink.h"
+test:Sub.h:    friend class GCS_MAVLINK_Sub;
+test:Sub.h:        mavlink_set_attitude_target_t packet;
+test:Sub.h:    bool handle_do_motor_test(mavlink_command_int_t command);
+test:ReleaseNotes.txt: - Set default BRD_RTC_TYPE to 3 (GPS and MAVLink)
+test:ReleaseNotes.txt: - Support depth setpoints via MAVlink in Depth-Hold mode
+test:ReleaseNotes.txt: - Support attitude setpoints via MAVlink in Depth-Hold and Stabilize modes
+test:ReleaseNotes.txt: - Support for setting MAVLink message intervals
+test:ReleaseNotes.txt:- Suppress repeated printing of "GPS detected as MAV" messages when no mavlink gps is connected
+test:ReleaseNotes.txt:- Add support for PLAY_TUNE and LED_CONTROL mavlink commands
+test:ReleaseNotes.txt:- Acknowledge MAV_CMD_PREFLIGHT_REBOOT_SHUTDOWN before shutting down
+test:ReleaseNotes.txt:- Remove BASE_RESET and BASE_PRESS baro parameters. Barometer reset is now done via mavlink cmd.
+test:ReleaseNotes.txt:- Implement parameter reset to defaults via mavlink cmd.
+test:ReleaseNotes.txt:    - Unsupported mavlink messages
+test:ReleaseNotes.txt:    a) GCS can use MAV_CMD_MISSION_START to start mission in AUTO even without pilot raising throttle 
+test:ReleaseNotes.txt:    e) GCS can initiate takeoff even in Loiter, AltHold, PosHold and sport by issuing NAV_TAKEOFF mavlink command
+test:ReleaseNotes.txt:4) Stop flight mode - causes vehicle to stop quickly, and does not respond to user input or waypoint movement via MAVLink.  Requires GPS, will be renamed to Brake mode.
+test:ReleaseNotes.txt:    b) Camera control messages sent via MAVLink to smart cameras.  Allow control of camera zoom for upcoming IntelEdison/Sony QX1 camera control board
+test:ReleaseNotes.txt:    a) SToRM32 gimbal support (using MAVLink)
+test:ReleaseNotes.txt:11) CLI removed from APM1/2 to save flash space, critical functions moved to MAVLink:
+test:failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Depth sensor error!");
+test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "EKF bad");
+test:failsafe.cpp:    gcs().send_text(MAV_SEVERITY_CRITICAL, "Lost manual control");
+test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal pressure critical!");
+test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Internal temperature critical!");
+test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "Leak Detected");
+test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "MYGCS: %u, heartbeat lost", g.sysid_my_gcs.get());
+test:failsafe.cpp:        gcs().send_text(MAV_SEVERITY_WARNING,"Crash detected");
+test:failsafe.cpp:            gcs().send_text(MAV_SEVERITY_CRITICAL,"Failsafe terrain triggered");
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "waiting for a rangefinder reading");
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to hold range", sub.g.surftrak_depth * 0.01f);
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "wrong mode, rangefinder target not set");
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "descend below %f meters to set rangefinder target", sub.g.surftrak_depth * 0.01f);
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target below minimum, ignored");
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_WARNING, "rangefinder target above maximum, ignored");
+test:mode_surftrak.cpp:        sub.gcs().send_text(MAV_SEVERITY_INFO, "rangefinder target is %.2f meters", rangefinder_target_cm * 0.01f);
+test:ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor is not connected.");
+test:ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor error.");
+test:ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+test:ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+test:ArduSub.cpp:    // no crosstrack error reported, see GCS_MAVLINK_Sub::send_nav_controller_output()
+test:motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "10 second cooldown required after motor test");
+test:motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL,"Disarm hardware safety switch before testing motors.");
+test:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Arm motors before testing motors.");
+test:motors.cpp:// MAV_CMD_DO_SET_MOTOR requests exceeds a timeout period
+test:motors.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Motor test timed out!");
+test:motors.cpp:bool Sub::handle_do_motor_test(mavlink_command_int_t command) {
+test:motors.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "motor test initialization failed!");
+test:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad test type %0.2f", (double)test_type);
+test:motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad throttle type %0.2f", (double)throttle_type);
+test:Parameters.h:        k_param_sysid_this_mav,
+test:Parameters.h:    AP_Int16        sysid_this_mav;
+test:Parameters.h:    { "MNT1_DEFLT_MODE",     MAV_MOUNT_MODE_RC_TARGETING},
+test:Parameters.cpp:    // @Param: SYSID_THISMAV
+test:Parameters.cpp:    // @DisplayName: MAVLink system ID of this vehicle
+test:Parameters.cpp:    // @Description: Allows setting an individual MAVLink system id for this vehicle to distinguish it from others on the same network
+test:Parameters.cpp:    GSCALAR(sysid_this_mav, "SYSID_THISMAV",   MAV_SYSTEM_ID),
+test:Parameters.cpp:    // @Description: bitmask of PIDs to send MAVLink PID_TUNING messages for
+test:Parameters.cpp:    // @Description: Default gain at boot, must be in range [JS_GAIN_MIN , JS_GAIN_MAX]. Current gain value is accessible via NAMED_VALUE_FLOAT MAVLink message with name 'PilotGain'.
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[0],  gcs0,       "SR0_",     GCS_MAVLINK_Parameters),
+test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 2
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[1],  gcs1,       "SR1_",     GCS_MAVLINK_Parameters),
+test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 3
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[2],  gcs2,       "SR2_",     GCS_MAVLINK_Parameters),
+test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 4
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[3],  gcs3,       "SR3_",     GCS_MAVLINK_Parameters),
+test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 5
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[4],  gcs4,       "SR4_",     GCS_MAVLINK_Parameters),
+test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 6
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[5],  gcs5,       "SR5_",     GCS_MAVLINK_Parameters),
+test:Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 7
+test:Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+test:Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[6],  gcs6,       "SR6_",     GCS_MAVLINK_Parameters),
+ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor is not connected.");
+ArduSub.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Depth sensor error.");
+ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+ArduSub.cpp:    // see GCS_MAVLINK_Sub::send_nav_controller_output()
+ArduSub.cpp:    // no crosstrack error reported, see GCS_MAVLINK_Sub::send_nav_controller_output()
+motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL, "10 second cooldown required after motor test");
+motors.cpp:        gcs().send_text(MAV_SEVERITY_CRITICAL,"Disarm hardware safety switch before testing motors.");
+motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "Arm motors before testing motors.");
+motors.cpp:// MAV_CMD_DO_SET_MOTOR requests exceeds a timeout period
+motors.cpp:        gcs().send_text(MAV_SEVERITY_INFO, "Motor test timed out!");
+motors.cpp:bool Sub::handle_do_motor_test(mavlink_command_int_t command) {
+motors.cpp:                gcs().send_text(MAV_SEVERITY_WARNING, "motor test initialization failed!");
+motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad test type %0.2f", (double)test_type);
+motors.cpp:        gcs().send_text(MAV_SEVERITY_WARNING, "bad throttle type %0.2f", (double)throttle_type);
+Parameters.h:        k_param_sysid_this_mav,
+Parameters.h:    AP_Int16        sysid_this_mav;
+Parameters.h:    { "MNT1_DEFLT_MODE",     MAV_MOUNT_MODE_RC_TARGETING},
+Parameters.cpp:    // @Param: SYSID_THISMAV
+Parameters.cpp:    // @DisplayName: MAVLink system ID of this vehicle
+Parameters.cpp:    // @Description: Allows setting an individual MAVLink system id for this vehicle to distinguish it from others on the same network
+Parameters.cpp:    GSCALAR(sysid_this_mav, "SYSID_THISMAV",   MAV_SYSTEM_ID),
+Parameters.cpp:    // @Description: bitmask of PIDs to send MAVLink PID_TUNING messages for
+Parameters.cpp:    // @Description: Default gain at boot, must be in range [JS_GAIN_MIN , JS_GAIN_MAX]. Current gain value is accessible via NAMED_VALUE_FLOAT MAVLink message with name 'PilotGain'.
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[0],  gcs0,       "SR0_",     GCS_MAVLINK_Parameters),
+Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 2
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[1],  gcs1,       "SR1_",     GCS_MAVLINK_Parameters),
+Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 3
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[2],  gcs2,       "SR2_",     GCS_MAVLINK_Parameters),
+Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 4
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[3],  gcs3,       "SR3_",     GCS_MAVLINK_Parameters),
+Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 5
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[4],  gcs4,       "SR4_",     GCS_MAVLINK_Parameters),
+Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 6
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[5],  gcs5,       "SR5_",     GCS_MAVLINK_Parameters),
+Parameters.cpp:#if MAVLINK_COMM_NUM_BUFFERS >= 7
+Parameters.cpp:    // @Path: GCS_Mavlink.cpp
+Parameters.cpp:    GOBJECTN(_gcs.chan_parameters[6],  gcs6,       "SR6_",     GCS_MAVLINK_Parameters),

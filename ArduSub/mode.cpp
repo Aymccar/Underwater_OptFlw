@@ -33,7 +33,7 @@ Mode *Sub::mode_from_mode_num(const Mode::Number mode)
         ret = &mode_stabilize;
         break;
     case Mode::Number::ACRO:
-        ret = &mode_acro;
+        ret = &mode_custom_stab;
         break;
     case Mode::Number::ALT_HOLD:
         ret = &mode_althold;
@@ -59,6 +59,7 @@ Mode *Sub::mode_from_mode_num(const Mode::Number mode)
     case Mode::Number::MOTOR_DETECT:
         ret = &mode_motordetect;
         break;
+ 
     default:
         break;
     }
@@ -95,13 +96,13 @@ bool Sub::set_mode(Mode::Number mode, ModeReason reason)
 
     // check for valid altitude if old mode did not require it but new one does
     // we only want to stop changing modes if it could make things worse
-    if (!sub.control_check_barometer() && // maybe use ekf_alt_ok() instead?
+    /*if (!sub.control_check_barometer() && // maybe use ekf_alt_ok() instead?
         flightmode->has_manual_throttle() &&
         !new_flightmode->has_manual_throttle()) {
         gcs().send_text(MAV_SEVERITY_WARNING, "Mode change failed: %s need alt estimate", new_flightmode->name());
         LOGGER_WRITE_ERROR(LogErrorSubsystem::FLIGHT_MODE, LogErrorCode(mode));
         return false;
-    }
+    }*/
 
     if (!new_flightmode->init(false)) {
         gcs().send_text(MAV_SEVERITY_WARNING,"Flight mode change failed %s", new_flightmode->name());

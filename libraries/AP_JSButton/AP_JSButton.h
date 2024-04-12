@@ -24,6 +24,7 @@ public:
         k_mode_acro             = 12,           ///< enter acro mode
         k_mode_surftrak         = 13,           ///< enter surftrak mode
 
+
         // 14-20 reserved for future mode functions
         k_mount_center          = 21,           ///< move mount to center
         k_mount_tilt_up         = 22,           ///< tilt mount up

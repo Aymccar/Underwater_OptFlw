@@ -118,7 +118,8 @@ public:
     friend class ModeCircle;
     friend class ModeSurface;
     friend class ModeMotordetect;
-
+    friend class ModeCustom_stab;
+    
     Sub(void);
 
 protected:
@@ -587,6 +588,7 @@ private:
     ModeSurface mode_surface;
     ModeMotordetect mode_motordetect;
     ModeSurftrak mode_surftrak;
+    ModeCustom_stab mode_custom_stab;
 
     // Auto
     AutoSubMode auto_mode;   // controls which auto controller is run
