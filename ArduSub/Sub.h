@@ -63,6 +63,10 @@
 #include <AP_LeakDetector/AP_LeakDetector.h> // Leak detector
 #include <AP_Proximity/AP_Proximity.h>
 #include <AP_Rally/AP_Rally.h>
+#include <AP_OpticalFlowUnderwater/OptFlowUnderWtr.h> // For the lateral stab with webcam
+#include <AC_PID/AC_PID.h>
+
+
 
 // Local modules
 #include "defines.h"
@@ -74,6 +78,8 @@
 #include "GCS_Sub.h"
 #include "mode.h"
 #include "script_button.h"
+
+
 
 #include <AP_OpticalFlow/AP_OpticalFlow.h>     // Optical Flow library
 

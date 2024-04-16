@@ -212,13 +212,28 @@ public:
     // inherit constructor
     using Mode::Mode;
     virtual void run() override;
-    bool init(bool ignore_checks) override;
+    bool init(bool ignore_checks) override; //Obligation for modes
+
     bool requires_GPS() const override { return false; }
     bool has_manual_throttle() const override { return true; }
     bool allows_arming(bool from_gcs) const override { return true; }
-    bool is_autopilot() const override { return false; }
-
+    bool is_autopilot() const override { return false; } //default 
+    
+    OptFlowUnderWtr treatment; // for me
 protected:
+    void attitude_stab();
+    void translat_stab(float x, float y, float, z);
+
+
+     AC_PID *pid_x = new AC_PID(1.0f, 0.01f, 0.01f, 0.0f, 10 * 100.0f, 0.0f, 0.0f, 5.0f);
+     AC_PID *pid_y = new AC_PID(1.0f, 0.01f, 0.01f, 0.0f, 10 * 100.0f, 0.0f, 0.0f, 5.0f);
+     AC_PID *pid_z = new AC_PID(1.0f, 0.01f, 0.01f, 0.0f, 10 * 100.0f, 0.0f, 0.0f, 5.0f);
+ 
+
+    float x;
+    float y;
+    float z;
+
 
     const char *name() const override { return "CUSTOM"; }
     const char *name4() const override { return "CUST"; }
