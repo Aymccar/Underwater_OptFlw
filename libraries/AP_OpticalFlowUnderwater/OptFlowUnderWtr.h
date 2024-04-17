@@ -1,6 +1,7 @@
 #pragma once
 #include <opencv2/videoio.hpp>
 #include <iostream>
+#include <array>
 #include <opencv2/core.hpp>
 #include <opencv2/opencv.hpp>
 

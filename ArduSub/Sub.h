@@ -63,9 +63,10 @@
 #include <AP_LeakDetector/AP_LeakDetector.h> // Leak detector
 #include <AP_Proximity/AP_Proximity.h>
 #include <AP_Rally/AP_Rally.h>
-#include <AP_OpticalFlowUnderwater/OptFlowUnderWtr.h> // For the lateral stab with webcam
-#include <AC_PID/AC_PID.h>
-
+//#include <AP_OpticalFlowUnderwater/OptFlowUnderWtr.h> // For the lateral stab with webcam
+//#include <AC_PID/AC_PID.h>
+#include <iostream>
+#include <array>
 
 
 // Local modules

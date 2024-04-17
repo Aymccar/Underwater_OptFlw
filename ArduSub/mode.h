@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Sub.h"
+#include <array>
 class Parameters;
 class ParametersG2;
 
@@ -219,10 +220,10 @@ public:
     bool allows_arming(bool from_gcs) const override { return true; }
     bool is_autopilot() const override { return false; } //default 
     
-    OptFlowUnderWtr treatment; // for me
+    // OptFlowUnderWtr treatment; // for me
 protected:
     void attitude_stab();
-    void translat_stab(float x, float y, float, z);
+    void translat_stab(float x, float y, float z);
 
 
      AC_PID *pid_x = new AC_PID(1.0f, 0.01f, 0.01f, 0.0f, 10 * 100.0f, 0.0f, 0.0f, 5.0f);
@@ -234,6 +235,7 @@ protected:
     float y;
     float z;
 
+    std::array<float, 3> displacement;
 
     const char *name() const override { return "CUSTOM"; }
     const char *name4() const override { return "CUST"; }
